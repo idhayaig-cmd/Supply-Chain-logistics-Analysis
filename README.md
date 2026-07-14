@@ -1,11 +1,7 @@
-# 📦 Supply Chain & Logistics Analysis (Power BI Project)
+# 📦 Supply Chain & Logistics Analysis
 
 ## 📌 Project Overview
 This project focuses on analyzing and optimizing supply chain operations for a retail logistics company. It evaluates key areas such as procurement, inventory, transportation, and order fulfillment to improve efficiency and reduce operational costs.
-
-The solution leverages **Excel, Power Query, and Power BI** to deliver interactive dashboards and actionable business insights.
-
----
 
 ## 🎯 Project Objectives
 - Analyze key supply chain KPIs:
@@ -13,6 +9,7 @@ The solution leverages **Excel, Power Query, and Power BI** to deliver interacti
   - Transportation Cost
   - Inventory Levels
   - Order Fulfillment Rate
+  
 - Identify inefficiencies and bottlenecks in logistics operations
 - Improve demand forecasting and inventory planning
 - Reduce operational and logistics costs
@@ -27,21 +24,12 @@ A regional retail company faced:
 - Rising inventory holding costs
 - Inconsistent supplier lead times
 
-### Key Business Questions:
-- Why did delivery delays increase in certain months?
-- How can demand be forecasted effectively?
-- Which suppliers perform best?
-- How to optimize inventory and reduce excess stock?
-
----
-
 ## 🗂️ Data Sources
 - **Dataset:** Supply Chain & Logistics Data  
 - **Source:** https://excelx.com/practice-data/generators/supply-chain-logistics/  
 - **Timeline:** 2022 – 2026  
 - **Domain:** Retail Logistics  
 
----
 
 ## 🧩 Data Model (Star Schema)
 The data is structured into **Fact and Dimension tables**:
@@ -73,7 +61,7 @@ The data is structured into **Fact and Dimension tables**:
 ## 🛠️ Tools & Technologies
 - **Excel** – Data Cleaning & Transformation  
 - **Power Query** – Data Processing  
-- **Power BI** – Data Modeling, DAX, Dashboarding  
+- **Power BI** – Data Modeling, DAX, Dashboarding,Report
 
 ---
 
@@ -86,22 +74,56 @@ The data is structured into **Fact and Dimension tables**:
 
 ---
 
-## 📐 DAX Measures (Key Metrics)
+## 📊 Dashboard Features
+- 📈 KPI Cards: On-Time %, Delayed Orders, Total Shipments  
+- 📉 Trend Analysis: Monthly delivery & cost trends  
+- 🚚 Shipment Tracking Insights  
+- 🏭 Warehouse Performance Analysis  
+- 📦 Inventory Monitoring  
+- 🔮 Demand Forecasting  
 
-```DAX
--- On-Time %
-On-Time % = DIVIDE([On-Time Orders], [Total Orders])
+---
 
--- On-Time Orders
-On-Time Orders =
-CALCULATE(
-    COUNT(Purchase_Orders[OrderDate]),
-    Purchase_Orders[OrderDate] <= Purchase_Orders[ExpectedDeliveryDate]
-)
+## 🔍 Key Insights
+- On-time delivery rate is below target  
+- Warehouse **WH-E** has the highest delays  
+- Slow-moving products cause excess inventory  
+- Supplier **S4** has high lead time variability  
+- Demand spikes increased delivery delays  
 
--- Cancelled Orders
-Cancelled Orders =
-CALCULATE(
-    COUNTROWS(Purchase_Orders),
-    Purchase_Orders[Delivery Status] = "Cancelled"
-)
+---
+
+## 💡 Recommendations
+- Increase staffing at Warehouse WH-E  
+- Optimize logistics routing  
+- Renegotiate supplier SLAs (S4)  
+- Implement SKU-level reorder rules  
+- Monitor KPIs weekly:
+  - On-Time Delivery %  
+  - Lead Time Variability  
+  - Inventory Days of Supply  
+
+---
+
+## 🚀 Future Improvements
+- Real-time data integration  
+- Predictive analytics (Machine Learning)  
+- Supplier performance scoring enhancement  
+- Automated alerts for delays & stockouts  
+
+---
+
+## 📌 Conclusion
+By addressing warehouse and supplier inefficiencies, the company can:
+
+- Improve delivery performance  
+- Reduce inventory costs  
+- Prevent stockouts  
+- Achieve better operational efficiency  
+
+---
+
+## 👤 Author
+**Idaya Gracy Jude**  
+
+
